@@ -2,8 +2,8 @@ import boto3
 from boto3.dynamodb.conditions import Key, Attr
 from boto3 import resource
 
-from gdelt.conf.global_settings import *
-import time
+from conf.global_settings import *
+from datetime import datetime as time
 
 class CDCHandler(object):
 

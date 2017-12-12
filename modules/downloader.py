@@ -10,7 +10,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 """
 
-from gdelt.conf.global_settings import *
+from conf.global_settings import PROXY_SERVERS,DOWNLOAD_TIME_OUT,GDELT_URL
 import requests
 
 
@@ -22,9 +22,9 @@ class Downloader(object):
 
     def download(self,file_name):
         self.response_obj = requests.get(self.url + str(file_name),
-                                        proxies=PROXY_SERVERS,
-                                        stream=True,
-                                        timeout=DOWNLOAD_TIME_OUT)
+                                            proxies=PROXY_SERVERS,
+                                            stream=True,
+                                            timeout=DOWNLOAD_TIME_OUT)
         return self.response_obj
 
 
