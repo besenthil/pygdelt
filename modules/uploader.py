@@ -1,8 +1,6 @@
 from conf.global_settings import *
 import boto3
 
-import zipfile
-
 import io
 
 class Uploader(object):
